@@ -108,12 +108,12 @@ function nextQuestion() {
   question = questions.shift();
   $('#game h2').text(question.q);
   $('#game p.intro').text(question.intro);
-  $('#game button:eq(0)').text(question.a0);
-  $('#game button:eq(1)').text(question.a1);
-  $('#game button:eq(2)').text(question.a2);
-  $('#game button:eq(3)').text(question.a3);
-  $('#game button:eq(4)').text(question.a4);
-  $('#game button:eq(5)').text(question.a5);
+  $('#game p:eq(0)').text(question.a0);
+  $('#game p:eq(1)').text(question.a1);
+  $('#game p:eq(2)').text(question.a2);
+  $('#game p:eq(3)').text(question.a3);
+  $('#game p:eq(4)').text(question.a4);
+  $('#game p:eq(5)').text(question.a5);
   
 }
 
@@ -188,26 +188,19 @@ $(document).ready(function () {
     
       <h2>Loading...</h2>
       
-      <p class="intro"></p>
-      <button onclick="handleAnswer(0);"></button>
-      <button onclick="handleAnswer(1);"></button>
-      <button onclick="handleAnswer(2);"></button>
-      <button onclick="handleAnswer(3);"></button>
-      <button onclick="handleAnswer(4);"></button>
-      <button onclick="handleAnswer(5);"></button>    
-    
+      <p class="intro"></p>   
      <ol class=" list-group" id="my-test" >
  <div class="input-group input-group-lg">
  <span class='input-group-addon'></span>
   <a href="#" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-lg">
-    <p class="list-group-item-text">We want to think about what we could add to or improve about what we do, 
+    <p class="list-group-item-text" onclick="handleAnswer(0);">We want to think about what we could add to or improve about what we do, 
 but <strong>we don’t want anything to look and feel different</strong> from how it does now.</p>
   </a>
   </div>
  <div class="input-group input-group-lg">
 <span class='input-group-addon'></span>
   <a href="#" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-lg">
-    <p class="list-group-item-text">We want to think about how we could add to or improve what we do, 
+    <p class="list-group-item-text" onclick="handleAnswer(1);">We want to think about how we could add to or improve what we do, 
 but we don’t think anything needs to look and feel different from how it does now.</p>
   </a>
   </div>
@@ -216,7 +209,7 @@ but we don’t think anything needs to look and feel different from how it does 
 <span class='input-group-addon'></span>
 
   <a href="#" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-lg">
-    <p class="list-group-item-text">We think things might need to look and feel a little different from how they do now, 
+    <p class="list-group-item-text" onclick="handleAnswer(2);">We think things might need to look and feel a little different from how they do now, 
 but <strong>we will have to decide if this should happen</strong> before making changes.</p>
   </a>
   </div>
@@ -224,7 +217,7 @@ but <strong>we will have to decide if this should happen</strong> before making 
 
 <span class='input-group-addon'></span>
 
-    <a href="#" class="list-group-item"  >
+    <a href="#" class="list-group-item"  onclick="handleAnswer(3);">
     <p class="list-group-item-text">We think things might need to look and feel different from how they do now, 
 and <strong>we are happy for this to happen</strong> if required.</p>
   </a>
@@ -234,7 +227,7 @@ and <strong>we are happy for this to happen</strong> if required.</p>
 <span class='input-group-addon'></span>
 
     <a class="list-group-item">
-    <p class="list-group-item-text">We think things need to look and feel very different from how they do now, 
+    <p class="list-group-item-text" onclick="handleAnswer(4);">We think things need to look and feel very different from how they do now, 
 and <strong>we want this to happen</strong>.</p>
   </a>
   </div>
@@ -242,7 +235,7 @@ and <strong>we want this to happen</strong>.</p>
 
 <span class='input-group-addon'></span>
     <a class="list-group-item">
-    <p class="list-group-item-text">We know that things need to look and feel very different from how they do now, 
+    <p class="list-group-item-text" onclick="handleAnswer(5);">We know that things need to look and feel very different from how they do now, 
 and <strong>we are ready for this to happen</strong>.</p>
   </a>
   </div>
