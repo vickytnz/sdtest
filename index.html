@@ -71,9 +71,9 @@ var questions =
 {"q":"Q4- Do you have permission to change?", "intro":"Think about whether everyone is on board with the idea of change, or whether some people are resistant to it. Consider if you have everyone affected by this work involved; you might need permission to change things in other parts of the organisation to the ones you work in. \n Choose the sentence that best reflects your organisation at the moment.","a0":"Nobody is on board with the idea of change.","e0":-10,"a1":"A few people related to the work think that things might need to change, but do not think it needs to happen now.","e1":-10,"a2":"Some people related to the work want to see things change, but do not think it needs to happen now.","e2":10, "a3":"Most people related to the work want to see things change, but are concerned about the impact that it could have.","e3":10, "a4":"Most people related to the work know that change is necessary, and are willing for this to happen.","e4":10, "a5":"Everyone related to the work knows that change is necessary, and want this to happen.","e5":10 }];
 var question = {};
 
-function panel(id) {
+function panel-quiz(id) {
 
-  $('.panel').css({display: 'none'});
+  $('.panel-quiz').css({display: 'none'});
   $('#' + id).css({display: 'table'});
   
 }
@@ -83,7 +83,7 @@ function startTest() {
   height = 50;
   setThermo();
   nextQuestion();
-  panel('game');
+  panel-quiz('game');
 
 }
 
@@ -136,7 +136,7 @@ function gameOver() {
 
   $('.height').text(height.toString());
   $('#rating').text(ratings[Math.min(Math.floor(height/10),10)]);
-  panel('results');
+  panel-quiz('results');
 
 }
 
@@ -151,7 +151,7 @@ $(document).ready(function () {
     
 <style>
 /*#over { width: 100%; height: 100%; background: url(map.gif) left center; background-size: auto 100%; background-repeat: no-repeat; position: absolute; }
-.panel { position: absolute; left: 30%; top: 3%; vertical-align: middle; width: 60%; height: 80%; display: none; background-color: rgba(255,255,255,0.7); border-radius: 5%; }
+.panel-quiz { position: absolute; left: 30%; top: 3%; vertical-align: middle; width: 60%; height: 80%; display: none; background-color: rgba(255,255,255,0.7); border-radius: 5%; }
 #intro { display: table; }
 .contents { text-align: center; display: table-cell; height: 100%; width: 100%; vertical-align: middle; padding: 5%; }
 .contents button { margin-top: 5%; }
@@ -167,7 +167,7 @@ $(document).ready(function () {
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
- <div class="panel" id="intro">
+ <div class="panel-quiz" id="intro">
     <div class="contents">
               <h1>Self-assessment tool for charities: Is it the right time to use Service Design?</h1>
         <p>We know your resources are precious, so answering these questions honestly will help you to establish if Service Design is the right investment for your organisation at the moment.</p> 
@@ -176,7 +176,7 @@ $(document).ready(function () {
     </div>
   </div>
   
-  <div class="panel" id="game">
+  <div class="panel-quiz" id="game">
   
     <div class="contents">
     
@@ -199,7 +199,7 @@ $(document).ready(function () {
   
   </div>
   
-<div class="panel" id="results">
+<div class="panel-quiz" id="results">
   
     <div class="contents">
     
