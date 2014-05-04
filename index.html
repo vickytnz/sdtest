@@ -65,7 +65,7 @@ var ratings = [
 
 var height = 50;
 var questions = 
-[{"q":"When did you last eat chips and gravy?","a0":"This week","e0":10,"a1":"This year","e1":5,"a2":"Longer, if ever","e2":-10},
+[{"q":"When did you last eat chips and gravy?","a0":"We think things might need to look and feel a little different from how they do now, but <strong>we will have to decide if this should happen</strong> before making changes.","e0":10,"a1":"This year","e1":5,"a2":"Longer, if ever","e2":-10},
 {"q":"Wheear 'ast tha bin sin' ah saw thee?\n","a0":"On Ilkla Mooar baht 'at\n","e0":10,"a1":"Wheear t'ducks play football","e1":7,"a2":"What?","e2":-10},
 {"q":"What's an oatcake?","a0":"It's like an oaty pancake","e0":5,"a1":"It's like oaty flatbread","e1":5,"a2":"It's like porridge","e2":-5},
 {"q":"When do you wear a coat?","a0":"When it's cold","e0":-5,"a1":"When there's an R in the month","e1":-3,"a2":"When hell freezes over","e2":10},
@@ -91,6 +91,11 @@ function startTest() {
   nextQuestion();
   panel('game');
 
+}
+
+
+function restartTest() {
+	startTest();
 }
 
 function setThermo() {
@@ -285,7 +290,9 @@ and <strong>we are ready for this to happen</strong>.</p>
     
       The results are in! We reckon you're
       <div id="score"><span class="height">56</span>% northern</div>
-      <div id="rating">Your rating will go here.</div>    
+      <div id="rating">Your rating will go here.</div>  
+      
+      <p><button id="restart" onClick="restartRound();"> Do the quiz again.</button></p>  
     </div>
   
   </div>
