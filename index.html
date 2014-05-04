@@ -150,12 +150,12 @@ $(document).ready(function () {
 </script>
     
 <style>
-#over { width: 100%; height: 100%; background: url(map.gif) left center; background-size: auto 100%; background-repeat: no-repeat; position: absolute; }
+/*#over { width: 100%; height: 100%; background: url(map.gif) left center; background-size: auto 100%; background-repeat: no-repeat; position: absolute; }
 .panel { position: absolute; left: 30%; top: 3%; vertical-align: middle; width: 60%; height: 80%; display: none; background-color: rgba(255,255,255,0.7); border-radius: 5%; }
 #intro { display: table; }
 .contents { text-align: center; display: table-cell; height: 100%; width: 100%; vertical-align: middle; padding: 5%; }
 .contents button { margin-top: 5%; }
-#score { font-size: 13vmin; margin-bottom: 2%; color: #fff; text-shadow: 1px 1px #000; font-weight: bold; line-height: 13vmin; }
+#score { font-size: 13vmin; margin-bottom: 2%; color: #fff; text-shadow: 1px 1px #000; font-weight: bold; line-height: 13vmin; } */
 </style>
         
     </head>
@@ -167,11 +167,46 @@ $(document).ready(function () {
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>Self-assessment tool for charities: Is it the right time to use Service Design?</h1>
-        <p>We know your resources are precious, so answering these questions honestly will help you to establish if Service Design is the right investment for your organisation at the moment. 
+ <div class="panel" id="intro">
+    <div class="contents">
+              <h1>Self-assessment tool for charities: Is it the right time to use Service Design?</h1>
+        <p>We know your resources are precious, so answering these questions honestly will help you to establish if Service Design is the right investment for your organisation at the moment.</p> 
 
-</p>
-        <p><a class="btn btn-primary btn-lg" role="button">Great, let's get started &raquo;</a></p>
+       <p><button onclick="startTest();" class="btn btn-primary btn-lg" role="button" >Great, let's get started &raquo;</button></p>
+    </div>
+  </div>
+  
+  <div class="panel" id="game">
+  
+    <div class="contents">
+    
+      <h2>Loading...</h2>
+      <p class="intro"></p>
+      <button onclick="handleAnswer(0);"></button>
+      <button onclick="handleAnswer(1);"></button>
+      <button onclick="handleAnswer(2);"></button>
+      <button onclick="handleAnswer(3);"></button>
+      <button onclick="handleAnswer(4);"></button>
+      <button onclick="handleAnswer(5);"></button>    
+    </div>
+  
+  </div>
+  
+<div class="panel" id="results">
+  
+    <div class="contents">
+    
+      The results are in! We reckon you're
+      <div id="score"><span class="height">56</span>% northern</div>
+      <div id="rating">Your rating will go here.</div>  
+      
+      <p><button id="restart" onClick="restartRound();"> Do the quiz again.</button></p>  
+    </div>
+  
+  </div>
+
+
+ 
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -261,44 +296,6 @@ and <strong>we are ready for this to happen</strong>.</p>
  
 
  <!-- Large modal -->
-<div class="panel" id="intro">
-    <div class="contents">
-              <h1>Self-assessment tool for charities: Is it the right time to use Service Design?</h1>
-        <p>We know your resources are precious, so answering these questions honestly will help you to establish if Service Design is the right investment for your organisation at the moment.</p> 
-
-      <button onclick="startTest();">Start the test</button>
-    </div>
-  </div>
-  
-  <div class="panel" id="game">
-  
-    <div class="contents">
-    
-      <h2>Loading...</h2>
-      <p class="intro"></p>
-      <button onclick="handleAnswer(0);"></button>
-      <button onclick="handleAnswer(1);"></button>
-      <button onclick="handleAnswer(2);"></button>
-      <button onclick="handleAnswer(3);"></button>
-      <button onclick="handleAnswer(4);"></button>
-      <button onclick="handleAnswer(5);"></button>    
-    </div>
-  
-  </div>
-  
-<div class="panel" id="results">
-  
-    <div class="contents">
-    
-      The results are in! We reckon you're
-      <div id="score"><span class="height">56</span>% northern</div>
-      <div id="rating">Your rating will go here.</div>  
-      
-      <p><button id="restart" onClick="restartRound();"> Do the quiz again.</button></p>  
-    </div>
-  
-  </div>
-
  
           
       </div>
