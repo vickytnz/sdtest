@@ -78,7 +78,9 @@ function panels(id) {
 
 function addTally(tally, elem){
 var id = $(elem).attr("id");
- printedresult +=  "<h2>" + $("#game h2").text() + "</h2><p>" + $(".list-group-item-text", id).text() + "</p>";
+ printedresult +=  "<h2>" + $("#game h2").text() + "</h2><p>" 
+ printedresult += $( "#" + id + ".list-group-item-text").text() + "</p>";
+alert(id);
  myheight += tally;
 }
 
@@ -87,7 +89,7 @@ var printedresult = "";
 function printresults(){
 var opened = window.open("");
 
-opened.document.write('<html><head><title>My results</title>link rel="stylesheet" href="css/bootstrap-theme.min.css"><link rel="stylesheet" href="css/main.css"></head><body>'+ printedresult  +'</body></html>');
+opened.document.write('<html><head><title>My results</title><link rel="stylesheet" href="css/bootstrap-theme.min.css"><link rel="stylesheet" href="css/main.css"></head><body>'+ printedresult  +'</body></html>');
 }
 
 function startTest() {
