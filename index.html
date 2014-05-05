@@ -80,6 +80,11 @@ function panels(id) {
   
 }
 
+function printresults(){
+var opened = window.open("");
+opened.document.write("<html><head><title>My title</title></head><body>test</body></html>");
+}
+
 function startTest() {
 	
   height = 50;
@@ -258,7 +263,8 @@ and <strong>we are ready for this to happen</strong>.</p>
       <div id="score"><span class="height">56</span>% northern</div>
       <p id="rating">Your rating will go here.</p>  
       
-      <p><button id="restart" onClick="location.reload();"> Do the quiz again.</button></p>  
+      <p><button id="restart" onClick="location.reload();"> Do the quiz again.</button></p>
+      <p><button id="restart" onClick="printresults();"> See results (opens in new window)</button></p>  
     </div>
   
   </div>
