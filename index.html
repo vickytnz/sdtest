@@ -78,7 +78,7 @@ function panels(id) {
 
 function addTally(tally, elem){
 var id = $(elem).attr("id");
- printedresult +=  "<h2>" + $("#game h2").text() + "</h2><p class='lead'>" 
+ printedresult +=  "<h3>" + $("#game h2").text() + "</h3><p class='lead'>" 
  printedresult += $( "#" + id + " .list-group-item-text").text() + "</p>";
  myheight += tally;
 }
@@ -88,7 +88,7 @@ var printedresult = "";
 function printresults(){
 var opened = window.open("");
 
-opened.document.write('<html><head><title>My results</title><link rel="stylesheet" href="css/bootstrap.min.css"><link rel="stylesheet" href="css/bootstrap-theme.min.css"><link rel="stylesheet" href="css/main.css"></head><body><h1>Is it the right time for your charity to use Service Design?</h1>'+ printedresult  +'</body></html>');
+opened.document.write('<html><head><title>Is it the right time for your charity to use Service Design?</title><link rel="stylesheet" href="css/bootstrap.min.css"><link rel="stylesheet" href="css/bootstrap-theme.min.css"><link rel="stylesheet" href="css/main.css"></head><body><h2>Is it the right time for your charity to use Service Design?</h2>'+ printedresult  +'</body></html>');
 }
 
 function startTest() {
