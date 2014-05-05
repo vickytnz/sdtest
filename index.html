@@ -120,12 +120,13 @@ function nextQuestion() {
   $('#game p:eq(5)').text(question.a5);
   $('.bs-example-modal-lg2 p').text(question.upper);
   $('.bs-example-modal-lg p').text(question.lower);
-  $('.progress-bar').css("width" , (25*currentquestion)+'%');
+  
 }
 
 function handleAnswer(id) {
   if(questions.length > 0) {
   currentquestion++; 
+  $('.progress-bar').css("width" , (25*currentquestion)+'%');
     nextQuestion();
   } else {
     gameOver();
