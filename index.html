@@ -76,8 +76,9 @@ function panels(id) {
   
 }
 
-function addTally(tally){
- printedresult +=  "<h2>" + $("h2").text() + "</h2><p>" + $(".list-group-item-text", this).text() + "</p>";
+function addTally(tally, elem){
+var id = $(elem).attr("id");
+ printedresult +=  "<h2>" + $("#game h2").text() + "</h2><p>" + $(".list-group-item-text", id).text() + "</p>";
  myheight += tally;
 }
 
@@ -201,14 +202,14 @@ width: 100%;
      <ol class=" list-group" id="my-test" >
  <div class="input-group input-group-lg">
  <span class='input-group-addon'></span>
-  <a href="#" class="list-group-item" data-toggle="modal"  onClick="addTally(0);" data-target=".bs-example-modal-lg">
+  <a href="#" class="list-group-item" data-toggle="modal" id="option1" onClick="addTally(0, this);" data-target=".bs-example-modal-lg">
     <p class="list-group-item-text">We want to think about what we could add to or improve about what we do, 
 but <strong>we don’t want anything to look and feel different</strong> from how it does now.</p>
   </a>
   </div>
  <div class="input-group input-group-lg">
 <span class='input-group-addon'></span>
-  <a href="#" class="list-group-item" data-toggle="modal" onClick="addTally(0);" data-target=".bs-example-modal-lg">
+  <a href="#" class="list-group-item" id="option2" data-toggle="modal" onClick="addTally(0, this);" data-target=".bs-example-modal-lg">
     <p class="list-group-item-text" >We want to think about how we could add to or improve what we do, 
 but we don’t think anything needs to look and feel different from how it does now.</p>
   </a>
@@ -217,7 +218,7 @@ but we don’t think anything needs to look and feel different from how it does 
 
 <span class='input-group-addon'></span>
 
-  <a href="#" class="list-group-item" data-toggle="modal"  onClick="addTally(0);" data-target=".bs-example-modal-lg">
+  <a href="#" class="list-group-item" id="option3" data-toggle="modal"  onClick="addTally(0, this);" data-target=".bs-example-modal-lg">
     <p class="list-group-item-text">We think things might need to look and feel a little different from how they do now, 
 but <strong>we will have to decide if this should happen</strong> before making changes.</p>
   </a>
@@ -226,7 +227,7 @@ but <strong>we will have to decide if this should happen</strong> before making 
 
 <span class='input-group-addon'></span>
 
-      <a href="#" class="list-group-item" data-toggle="modal"  onClick="addTally(1);" data-target=".bs-example-modal-lg2">
+      <a href="#" class="list-group-item" id="option4" data-toggle="modal"  onClick="addTally(1, this);" data-target=".bs-example-modal-lg2">
     <p class="list-group-item-text lead">We think things might need to look and feel different from how they do now, 
 and <strong>we are happy for this to happen</strong> if required.</p>
   </a>
@@ -235,7 +236,7 @@ and <strong>we are happy for this to happen</strong> if required.</p>
 
 <span class='input-group-addon'></span>
 
-    <a href="#" class="list-group-item" data-toggle="modal"  onClick="addTally(1); " data-target=".bs-example-modal-lg2">
+    <a href="#" class="list-group-item" id="option5" data-toggle="modal"  onClick="addTally(1, this); " data-target=".bs-example-modal-lg2">
     <p class="list-group-item-text lead">We think things need to look and feel very different from how they do now, 
 and <strong>we want this to happen</strong>.</p>
   </a>
@@ -243,7 +244,7 @@ and <strong>we want this to happen</strong>.</p>
  <div class="input-group input-group-lg">
 
 <span class='input-group-addon'></span>
-    <a href="#" class="list-group-item" data-toggle="modal"  onClick="addTally(1);" data-target=".bs-example-modal-lg2">
+    <a href="#" class="list-group-item" id="option6" data-toggle="modal"  onClick="addTally(1, this);" data-target=".bs-example-modal-lg2">
     <p class="list-group-item-text">We know that things need to look and feel very different from how they do now, 
 and <strong>we are ready for this to happen</strong>.</p>
   </a>
