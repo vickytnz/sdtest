@@ -57,7 +57,7 @@ var ratings = [
 'Sounds like Service Design is just what you\'re looking for. What are you waiting for? Get in touch You might find it useful to print out your answers and use them to talk with a designer or agency about the best way for your organisation to use Service Design.'
 ]
 
-var myheight = 0;
+var height = 0;
 var questions = 
 [{"progress":0 , "q":"Q1- Do you want to see radical change?", "intro":"Think about whether you want things to look and feel very different from the way they do currently, or if you want to improve aspects of a service that already exist. Choose the sentence that best reflects your organisation at the moment.", "a0":"We think things might need to look and feel a little different from how they do now, but we will have to decide if this should happen before making changes.","e0":0,"a1":"We want to think about how we could add to or improve what we do, but we don\'t think anything needs to look and feel different from how it does now.","e1":0,"a2":"We think things might need to look and feel a little different from how they do now, but we will have to decide if this should happen before making changes.","e2": 0, "a3":"We think things might need to look and feel different from how they do now, and we are happy for this to happen if required.","e3":0, "a4":"We think things need to look and feel very different from how they do now, and we want this to happen.","e4": 10, "a5":"We know that things need to look and feel very different from how they do now, and we are ready for this to happen.","e5": 10, "lower":"Not everyone is looking to undergo radical change, and sometimes it isn\'t needed. Because service design engages stakeholders in a new way, asking different questions, it might reveal that something needs to look and feel very different from how you imagined. To get the most out of working with a service designer, it is better to be in a position where you would be able to implement radical change if it was needed.", "upper":"A key role of a service designer is to help you challenge the way things are currently done to help you imagine and deliver new alternatives. We use specifically designed tools to help you think beyond small changes, and see how your services or systems could be fundamentally different." },
 {"progress":25 ,"q":"Q2- Do you have the capacity to change?", "intro":"Think about how much time and resource you have available to think about what needs to change, and to make those changes.  You might need this time and resource in different departments or levels of the organisation. \n Choose the sentence that best reflects your organisation at the moment" ,"a0":"We don\'t have any time or resource to do anything new.","e0":0,"a1":"We have a limited amount of time and resource to think about change, and this work is one of our priorities.","e1":0,"a2":"We have a limited amount of time and resource to support someone to do the work required, and this work is one of our priorities.","e2":0, "a3":"We have a limited amount of time and resource available at certain levels of the organisation to understand what changes should be made, as it is one of our priorities.","e3":10, "a4":"We have a dedicated amount of time and resource available at certain levels of the organisation to understand what changes should be made and make those changes happen, as it is one of our priorities.","e4":10, "a5":"We are committed to providing the time and resource required at all levels of the organisation to understand what changes should be made and make those changes happen, as this is our main priority.","e5":10, "lower":"We recognise that there are real operational and funding challenges affecting voluntary organisations at the moment. Although there is never a perfect time to undergo change, it is important that you identify whether your organisation is in the position to invest time and resource to work collectively on the shape of a new service or strategy. If it\'s not, we hope you might consider service design again when it is. ", "upper":"Service design can produce tangible change quite quickly, but there also needs to be an investment in time and resource to both the service design process, and any resulting outcomes. It should definitely be seen as an investment, as undertaking the right activities with the users, staff and partners can ensure that you develop what they want, rather than what you think they want." },
@@ -75,7 +75,7 @@ function panels(id) {
 }
 
 addTally(tally){
- myheight += tally;
+ height += tally;
 }
 
 function printresults(){
@@ -84,7 +84,8 @@ opened.document.write("<html><head><title>My title</title></head><body>test</bod
 }
 
 function startTest() {
-  myheight = 0;
+	
+  height = 0;
   setThermo();
   nextQuestion();
   panels('game');
@@ -139,9 +140,9 @@ function handleAnswer(id) {
 
 
 function gameOver() {
- alert(myheight);
-  $('.height').text(myheight.toString());
-  $('#rating').text(ratings[myheight]);
+ alert(height);
+  $('.height').text(height.toString());
+  $('#rating').text(ratings[Math.min(Math.floor(height/10),10)]);
   panels('results');
 
 }
@@ -236,7 +237,7 @@ and <strong>we want this to happen</strong>.</p>
  <div class="input-group input-group-lg">
 
 <span class='input-group-addon'></span>
-    <a href="#" class="list-group-item" data-toggle="modal"  onClick="addTally(1);" data-target=".bs-example-modal-lg2">
+    <a href="#" class="list-group-item" data-toggle="modal"  onClick="addTally(0);" data-target=".bs-example-modal-lg2">
     <p class="list-group-item-text">We know that things need to look and feel very different from how they do now, 
 and <strong>we are ready for this to happen</strong>.</p>
   </a>
