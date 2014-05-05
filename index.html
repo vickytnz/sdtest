@@ -57,6 +57,8 @@ var ratings = [
 'Sounds like Service Design is just what you\'re looking for. What are you waiting for? Get in touch You might find it useful to print out your answers and use them to talk with a designer or agency about the best way for your organisation to use Service Design.'
 ]
 
+var ratingstitle = ['Not for you', 'Not for you', 'Maybe', 'Maybe' , 'Perfect match']
+
 var myheight = 0;
 var questions = 
 [{"progress":0 , "q":"Q1- Do you want to see radical change?", "intro":"Think about whether you want things to look and feel very different from the way they do currently, or if you want to improve aspects of a service that already exist. Choose the sentence that best reflects your organisation at the moment.", "a0":"We think things might need to look and feel a little different from how they do now, but we will have to decide if this should happen before making changes.","e0":0,"a1":"We want to think about how we could add to or improve what we do, but we don\'t think anything needs to look and feel different from how it does now.","e1":0,"a2":"We think things might need to look and feel a little different from how they do now, but we will have to decide if this should happen before making changes.","e2": 0, "a3":"We think things might need to look and feel different from how they do now, and we are happy for this to happen if required.","e3":0, "a4":"We think things need to look and feel very different from how they do now, and we want this to happen.","e4": 10, "a5":"We know that things need to look and feel very different from how they do now, and we are ready for this to happen.","e5": 10, "lower":"Not everyone is looking to undergo radical change, and sometimes it isn\'t needed. Because service design engages stakeholders in a new way, asking different questions, it might reveal that something needs to look and feel very different from how you imagined. To get the most out of working with a service designer, it is better to be in a position where you would be able to implement radical change if it was needed.", "upper":"A key role of a service designer is to help you challenge the way things are currently done to help you imagine and deliver new alternatives. We use specifically designed tools to help you think beyond small changes, and see how your services or systems could be fundamentally different." },
@@ -140,7 +142,7 @@ function handleAnswer(id) {
 
 function gameOver() {
  alert(myheight);
-  $('.height').text(myheight.toString());
+  $('.height').text(ratingstitle[myheight]);
   $('#rating').text(ratings[myheight]);
   panels('results');
 
@@ -253,7 +255,7 @@ and <strong>we are ready for this to happen</strong>.</p>
   
     <div class="contents">
     
-       <h1 id="score"><span class="height">56</span></h1>
+       <h1 id="score" class="height"></h1>
       <p id="rating">Your rating will go here.</p>  
       
       <p><button id="restart" onClick="location.reload();"> Do the quiz again.</button></p>
