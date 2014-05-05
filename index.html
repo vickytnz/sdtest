@@ -70,7 +70,7 @@ var questions =
 {"q":"Q3- Do you want to involve your users, staff and partners in the design of your services?", "intro":"Think about whether you want to design and build the service with those who benefit and those who deliver it, or if you want to develop a vision amongst management, and then share that with your team. \nChoose the sentence that best reflects your organisation at the moment.","a0":"We don’t want to consult with our users, staff and partners.","e0":-10,"a1":"We want to involve some users, staff or partners in evaluating the changes to our services.","e1":-10,"a2":"We want to involve some users, staff or partners in reviewing our ideas for changing our services.","e2":-5, "a3":"We want to involve some users, staff and partners in suggesting how our services should change and what they should look like in the future.","e3":10, "a4":"We want to involve our users, staff and partners in deciding how our services should change, what they should look like in the future, and testing the new things we create.","e4":10, "a5":"We want to involve our users, staff and partners in every stage of the design and development of our services.","e5":10, "lower":"Service design actively draws on the knowledge and know-how of your staff, partners and beneficiaries, as we believe they are the experts that hold the key to better services. We find that involving the people who will deliver and receive those services as early as possible, and as often as possible, encourages them to take ownership of their ideas, and helps to ensure they work in the long-term. We know that this is something that organisations don\'t always want to do or feel able to do, but we feel it is key to getting the most out of this approach.", "upper":"Service design actively draws on the knowledge and know-how of your staff, partners and beneficiaries- they are the experts after all. If management and trustees encourage the participation in the project from the start, it is easier to capitalise on the valuable expertise of your stakeholders." },
 {"q":"Q4- Do you have permission to change?", "intro":"Think about whether everyone is on board with the idea of change, or whether some people are resistant to it. Consider if you have everyone affected by this work involved; you might need permission to change things in other parts of the organisation to the ones you work in. \n Choose the sentence that best reflects your organisation at the moment.","a0":"Nobody is on board with the idea of change.","e0":-10,"a1":"A few people related to the work think that things might need to change, but do not think it needs to happen now.","e1":-10,"a2":"Some people related to the work want to see things change, but do not think it needs to happen now.","e2":10, "a3":"Most people related to the work want to see things change, but are concerned about the impact that it could have.","e3":10, "a4":"Most people related to the work know that change is necessary, and are willing for this to happen.","e4":10, "a5":"Everyone related to the work knows that change is necessary, and want this to happen.","e5":10, "lower":"It\'s important that you have that permission to change from the people that matter to your service and organisation. That might be partners and commissioners, as well as staff and trustees. We can help you bring people together and have useful conversations about barriers to change, but there needs to be buy-in at the right levels of the organisation for service design to have a real impact. We don\'t just produce reports about what should happen, we like to make it happen, which means we need the go-ahead to put things in place.", "upper":"We work with people to help understand what needs to change and how that should look and feel, so it\'s great when there is already agreement to make that happen. We test ideas as much as possible to ensure they work as desired in the real world, so having the go-ahead to do this is also very important. Change can feel quite scary sometimes, but encouragement from staff, trustees, and maybe even partners and commissioners, can help people feel the change is something they can have a say in." }];
 var question = {};
-
+var currentquestion = 1;
 var answer = {};
 
 function panels(id) {
@@ -81,7 +81,7 @@ function panels(id) {
 }
 
 function startTest() {
-
+	
   height = 50;
   setThermo();
   nextQuestion();
@@ -105,6 +105,8 @@ function setThermo() {
 
 }
 
+
+
 function nextQuestion() {
 
   question = questions.shift();
@@ -118,7 +120,8 @@ function nextQuestion() {
   $('#game p:eq(5)').text(question.a5);
   $('.bs-example-modal-lg2 p').text(question.upper);
   $('.bs-example-modal-lg p').text(question.lower);
-  
+  $('.progress-bar').css("width", (100/(questions.length)*currentquestion).toString());
+  currentquestion++;
 }
 
 function handleAnswer(id) {
@@ -150,7 +153,6 @@ function gameOver() {
 $(document).ready(function () {
 
   setThermo();
- alert(questions.length);
 });
 
 </script>
