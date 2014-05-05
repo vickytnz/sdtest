@@ -79,8 +79,7 @@ function panels(id) {
 function addTally(tally, elem){
 var id = $(elem).attr("id");
  printedresult +=  "<h2>" + $("#game h2").text() + "</h2><p>" 
- printedresult += $( "#" + id + ".list-group-item-text").text() + "</p>";
-alert(id);
+ printedresult += $( "#" + id + " .list-group-item-text").text() + "</p>";
  myheight += tally;
 }
 
