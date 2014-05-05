@@ -108,19 +108,21 @@ function setThermo() {
 
 
 function nextQuestion() {
-
-  question = questions.shift();
-  $('#game h2').text(question.q);
-  $('#game p.intro').text(question.intro);
-  $('#game p:eq(0)').text(question.a0);
-  $('#game p:eq(1)').text(question.a1);
-  $('#game p:eq(2)').text(question.a2);
-  $('#game p:eq(3)').text(question.a3);
-  $('#game p:eq(4)').text(question.a4);
-  $('#game p:eq(5)').text(question.a5);
-  $('.bs-example-modal-lg2 p').text(question.upper);
-  $('.bs-example-modal-lg p').text(question.lower);
-  $('.progress-bar').css("width" , (question.progress)+'%');
+  	question = questions.shift();
+  	$('#game h2').text(question.q);
+  	$('#game p.intro').text(question.intro);
+  	$('#game p:eq(0)').text(question.a0);
+  	$('#game p:eq(1)').text(question.a1);
+  	$('#game p:eq(2)').text(question.a2);
+  	$('#game p:eq(3)').text(question.a3);
+  	$('#game p:eq(4)').text(question.a4);
+  	$('#game p:eq(5)').text(question.a5);
+  	$('.bs-example-modal-lg2 p').text(question.upper);
+  	$('.bs-example-modal-lg p').text(question.lower);
+	$('.progress-bar').css("width" , (question.progress)+'%');
+	if(questions.length == 1 ){
+		$('.modal-footer button').text("See results").class("btn-primary");	
+	}
 }
 
 function handleAnswer(id) {
@@ -256,7 +258,7 @@ and <strong>we are ready for this to happen</strong>.</p>
       <div id="score"><span class="height">56</span>% northern</div>
       <div id="rating">Your rating will go here.</div>  
       
-      <p><button id="restart" onClick="restartRound();"> Do the quiz again.</button></p>  
+      <p><button id="restart" onClick="location.reload();"> Do the quiz again.</button></p>  
     </div>
   
   </div>
