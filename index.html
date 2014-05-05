@@ -71,6 +71,8 @@ var questions =
 {"q":"Q4- Do you have permission to change?", "intro":"Think about whether everyone is on board with the idea of change, or whether some people are resistant to it. Consider if you have everyone affected by this work involved; you might need permission to change things in other parts of the organisation to the ones you work in. \n Choose the sentence that best reflects your organisation at the moment.","a0":"Nobody is on board with the idea of change.","e0":-10,"a1":"A few people related to the work think that things might need to change, but do not think it needs to happen now.","e1":-10,"a2":"Some people related to the work want to see things change, but do not think it needs to happen now.","e2":10, "a3":"Most people related to the work want to see things change, but are concerned about the impact that it could have.","e3":10, "a4":"Most people related to the work know that change is necessary, and are willing for this to happen.","e4":10, "a5":"Everyone related to the work knows that change is necessary, and want this to happen.","e5":10, "lower":"It\'s important that you have that permission to change from the people that matter to your service and organisation. That might be partners and commissioners, as well as staff and trustees. We can help you bring people together and have useful conversations about barriers to change, but there needs to be buy-in at the right levels of the organisation for service design to have a real impact. We don\'t just produce reports about what should happen, we like to make it happen, which means we need the go-ahead to put things in place.", "upper":"We work with people to help understand what needs to change and how that should look and feel, so it\'s great when there is already agreement to make that happen. We test ideas as much as possible to ensure they work as desired in the real world, so having the go-ahead to do this is also very important. Change can feel quite scary sometimes, but encouragement from staff, trustees, and maybe even partners and commissioners, can help people feel the change is something they can have a say in." }];
 var question = {};
 
+var answer = {};
+
 function panels(id) {
 
   $('.panels').css({display: 'none'});
@@ -134,6 +136,8 @@ function handleAnswer(id) {
 
 }
 
+
+
 function gameOver() {
 
   $('.height').text(height.toString());
@@ -146,7 +150,7 @@ function gameOver() {
 $(document).ready(function () {
 
   setThermo();
-
+ alert(questions.length);
 });
 
 </script>
@@ -202,7 +206,7 @@ but <strong>we don’t want anything to look and feel different</strong> from ho
  <div class="input-group input-group-lg">
 <span class='input-group-addon'></span>
   <a href="#" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-lg">
-    <p class="list-group-item-text" onclick="handleAnswer(1);">We want to think about how we could add to or improve what we do, 
+    <p class="list-group-item-text" >We want to think about how we could add to or improve what we do, 
 but we don’t think anything needs to look and feel different from how it does now.</p>
   </a>
   </div>
@@ -211,7 +215,7 @@ but we don’t think anything needs to look and feel different from how it does 
 <span class='input-group-addon'></span>
 
   <a href="#" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-lg">
-    <p class="list-group-item-text" onclick="handleAnswer(2);">We think things might need to look and feel a little different from how they do now, 
+    <p class="list-group-item-text">We think things might need to look and feel a little different from how they do now, 
 but <strong>we will have to decide if this should happen</strong> before making changes.</p>
   </a>
   </div>
@@ -220,7 +224,7 @@ but <strong>we will have to decide if this should happen</strong> before making 
 <span class='input-group-addon'></span>
 
       <a href="#" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-lg2">
-    <p class="list-group-item-text" onclick="handleAnswer(3);">We think things might need to look and feel different from how they do now, 
+    <p class="list-group-item-text">We think things might need to look and feel different from how they do now, 
 and <strong>we are happy for this to happen</strong> if required.</p>
   </a>
   </div>
@@ -229,7 +233,7 @@ and <strong>we are happy for this to happen</strong> if required.</p>
 <span class='input-group-addon'></span>
 
     <a href="#" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-lg2">
-    <p class="list-group-item-text" onclick="handleAnswer(4);">We think things need to look and feel very different from how they do now, 
+    <p class="list-group-item-text">We think things need to look and feel very different from how they do now, 
 and <strong>we want this to happen</strong>.</p>
   </a>
   </div>
@@ -237,7 +241,7 @@ and <strong>we want this to happen</strong>.</p>
 
 <span class='input-group-addon'></span>
     <a href="#" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-lg2">
-    <p class="list-group-item-text" onclick="handleAnswer(5);">We know that things need to look and feel very different from how they do now, 
+    <p class="list-group-item-text">We know that things need to look and feel very different from how they do now, 
 and <strong>we are ready for this to happen</strong>.</p>
   </a>
   </div>
@@ -287,8 +291,7 @@ and <strong>we are ready for this to happen</strong>.</p>
         <p>Not everyone is looking to undergo radical change, and sometimes it isn’t needed. Because service design engages stakeholders in a new way, asking different questions, it might reveal that something needs to look and feel very different from how you imagined. To get the most out of working with a service designer, it is better to be in a position where you would be able to implement radical change if it was needed.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" onclick="handleAnswer(1);" class="btn btn-default" data-dismiss="modal">Next question</button>  
       </div>
     </div>
   </div></div>
@@ -304,8 +307,7 @@ and <strong>we are ready for this to happen</strong>.</p>
         <p>Not everyone is looking to undergo radical change, and sometimes it isn’t needed. Because service design engages stakeholders in a new way, asking different questions, it might reveal that something needs to look and feel very different from how you imagined. To get the most out of working with a service designer, it is better to be in a position where you would be able to implement radical change if it was needed.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-default" onclick="handleAnswer(4);" data-dismiss="modal">Next question</button>
       </div>
     </div>
   </div></div>
