@@ -120,7 +120,7 @@ function nextQuestion() {
   $('#game p:eq(5)').text(question.a5);
   $('.bs-example-modal-lg2 p').text(question.upper);
   $('.bs-example-modal-lg p').text(question.lower);
-  $('.progress-bar').css("width", (100/(questions.length)*currentquestion).toString());
+  $('.progress-bar').css("width", (25*currentquestion).toString());
   currentquestion++;
 }
 
