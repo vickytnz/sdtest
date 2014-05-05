@@ -78,7 +78,7 @@ function panels(id) {
 
 function addTally(tally, elem){
 var id = $(elem).attr("id");
- printedresult +=  "<h2>" + $("#game h2").text() + "</h2><p>" 
+ printedresult +=  "<h2>" + $("#game h2").text() + "</h2><p class='lead'>" 
  printedresult += $( "#" + id + " .list-group-item-text").text() + "</p>";
  myheight += tally;
 }
@@ -150,7 +150,7 @@ function gameOver() {
   $('.height').text(ratingstitle[myheight]);
   $('#rating').text(ratings[myheight]);
   panels('results');
-
+ printedresult += '<div class="jumbotron"><h2>' +  ratingstitle[myheight] + '</h2><p class="lead">' + ratings[myheight] + '</p></div>' ;
 }
 
 
