@@ -118,12 +118,12 @@ function nextQuestion() {
   	question = questions.shift();
   	$('#game h2').text(question.q);
   	$('#game p.intro').text(question.intro);
-  	$('#game p:eq(0)').text(question.a0);
-  	$('#game p:eq(1)').text(question.a1);
-  	$('#game p:eq(2)').text(question.a2);
-  	$('#game p:eq(3)').text(question.a3);
-  	$('#game p:eq(4)').text(question.a4);
-  	$('#game p:eq(5)').text(question.a5);
+  	$('#game p.list-group-item-text:eq(0)').text(question.a0);
+  	$('#game p.list-group-item-text:eq(1)').text(question.a1);
+  	$('#game p.list-group-item-text:eq(2)').text(question.a2);
+  	$('#game p.list-group-item-text:eq(3)').text(question.a3);
+  	$('#game p.list-group-item-text:eq(4)').text(question.a4);
+  	$('#game p.list-group-item-text:eq(5)').text(question.a5);
   	$('.bs-example-modal-lg2 p').text(question.upper);
   	$('.bs-example-modal-lg p').text(question.lower);
 	$('.progress-bar').css("width" , (question.progress)+'%');
