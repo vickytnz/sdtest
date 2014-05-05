@@ -121,7 +121,7 @@ function nextQuestion() {
   	$('.bs-example-modal-lg p').text(question.lower);
 	$('.progress-bar').css("width" , (question.progress)+'%');
 	if(questions.length < 1 ){
-		$('.modal-footer button').text("See results").addClass("btn-primary");	
+		$('.modal-footer button').text("See results").removeClass("btn-default").addClass("btn-primary");	
 	}
 }
 
