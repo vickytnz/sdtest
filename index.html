@@ -82,13 +82,14 @@ var id = $(elem).attr("id");
  printedresult +=  "<h3>" + $("#game h2").text() + "</h3><p class='lead'>" 
  printedresult += $( "#" + id + " .list-group-item-text").text() + "</p>";
  myheight += tally;
+  ga('send', 'event', 'button', 'click', id );
 }
 
 var printedresult = "";
 
 function printresults(){
 var opened = window.open("");
-
+ga('send', 'event', 'download', 'click');
 opened.document.write('<html><head><title>Is it the right time for your charity to use Service Design?</title><link rel="shortcut icon" href="favicon.ico" /><link rel="stylesheet" href="css/bootstrap.min.css"><link rel="stylesheet" href="css/bootstrap-theme.min.css"><link rel="stylesheet" href="css/main.css"></head><body><div class="container"><h2>Is it the right time for your charity to use Service Design?</h2><p class="lead"><em>Here is a summary of how you answered the questions. You may find it useful to print out this page to discuss your responses with a service designer or agency, so you can decide how a service design approach could benefit your organisation.</em></p>'+ printedresult  +'</div><div class="container">&copy; Laura Warwick 2014</div></body></html>');
 }
 
@@ -150,6 +151,7 @@ function handleAnswer(id) {
 function gameOver() {
   $('.height').text(ratingstitle[myheight]);
   $('#rating').text(ratings[myheight]);
+  ga('send', 'event', 'result', 'click', ratingstitle[myheight] );
   panels('results');
  printedresult += '<div class="jumbotron"><h2>' +  ratingstitle[myheight] + '</h2><p class="lead">' + ratings[myheight] + '</p></div>' ;
 }
@@ -358,12 +360,14 @@ and <strong>we are ready for this to happen</strong>.</p>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50743816-1', 'laurawarwick.com');
+  ga('send', 'pageview');
+
+</script>
     </body>
 </html>
