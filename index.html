@@ -91,14 +91,14 @@ var id = $(elem).attr("id");
  	if (fails !="") {
  		fails += " and ";
  	}
- 	fails += questions[progress]["fail"];
+ 	fails += question.fail;
  }
- progress++;
+
   ga('send', 'event', 'button', 'click', id );
 }
 
 var printedresult = "";
-var progress = 0;
+
 
 function printresults(){
 var opened = window.open("");
