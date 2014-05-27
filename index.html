@@ -166,7 +166,7 @@ function gameOver() {
   $('.height').text(ratingstitle[myheight]);
   $extra = "";
   if (myheight >1 && myheight < 4) {
-  extra = "It sounds like you might not have <strong>" + fails  +  "</strong> right now." + ratings[myheight]; 	
+  extra = "It sounds like you might not have <strong>" + fails  +  "</strong> right now.<br/>" + ratings[myheight]; 	
   }
   $('#rating').html(extra +  ratings[myheight]);
   ga('send', 'event', 'result', 'click', ratingstitle[myheight] );
