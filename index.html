@@ -164,7 +164,7 @@ function handleAnswer(id) {
 
 function gameOver() {
   $('.height').text(ratingstitle[myheight]);
-  $extra = "";
+  var extra = "";
   if (myheight >1 && myheight < 4) {
   extra = "It sounds like you might not have <strong>" + fails  +  "</strong> right now.<br/><br/>" + ratings[myheight]; 	
   }
