@@ -112,10 +112,21 @@ line-height: 120px;
 background: #ccc;
 }
 
+#rating span.q1 {
+	color: red; 
+}
 
+#rating span.q2 {
+	color: orange; 
+}
 
+#rating span.q3 {
+	color: green; 
+}
 
-
+#rating span.q4 {
+	color: blue; 
+}
 
 
 
