@@ -127,8 +127,9 @@ function restartRound() {
 
 
 function nextQuestion() {
-
+	
   	question = questions.shift();
+  	$('#game').addClass("question-" +nextquestion );
   	$('#game h2').html(question.q);
   	$('#game p.intro').text(question.intro);
   	$('#game p.list-group-item-text:eq(0)').html(question.a0);
@@ -157,6 +158,7 @@ function handleAnswer(id) {
 	 }
 	ga('send', 'event', 'button', 'click', currentid );
   if(questions.length > 0) {
+   currentquestion++;
     nextQuestion();
   } else {
     gameOver();
