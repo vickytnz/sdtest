@@ -84,6 +84,7 @@ var fails = "";
 
 var currentid = "";
 var myTally = "";
+var correctcircles ="";
 function addTally(tally, elem){
 currentid = $(elem).attr("id");
 myTally = tally;
@@ -155,6 +156,10 @@ function handleAnswer(id) {
 	 		fails += " and ";
 	 	}
 	 	fails += question.fail;
+	 } else  { /* correct, yay! */
+	  var temp = "question-"+ currentquestion + "-correct "l
+	 $('body').addClass(temp);
+	 correctcircles+= temp;
 	 }
 	ga('send', 'event', 'button', 'click', currentid );
   if(questions.length > 0) {
