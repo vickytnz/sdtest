@@ -41,7 +41,7 @@ font-weight: bold;
 	position:absolute;
 	width:50%;
 	height:50%;
-	transition:background-color 0.2s ease-in-out;
+	/*transition:background-color 0.2s ease-in-out;*/
 }
 .quarter:hover {
 	background-color:grey;
