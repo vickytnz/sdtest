@@ -137,14 +137,14 @@ function nextQuestion() {
   	question = questions.shift();
   	$('#game h2').text(question.q);
   	$('#game p.intro').text(question.intro);
-  	$('#game p.list-group-item-text:eq(0)').text(question.a0);
-  	$('#game p.list-group-item-text:eq(1)').text(question.a1);
-  	$('#game p.list-group-item-text:eq(2)').text(question.a2);
-  	$('#game p.list-group-item-text:eq(3)').text(question.a3);
-  	$('#game p.list-group-item-text:eq(4)').text(question.a4);
-  	$('#game p.list-group-item-text:eq(5)').text(question.a5);
-  	$('.bs-example-modal-lg2 p').text(question.upper);
-  	$('.bs-example-modal-lg p').text(question.lower);
+  	$('#game p.list-group-item-text:eq(0)').html(question.a0);
+  	$('#game p.list-group-item-text:eq(1)').html(question.a1);
+  	$('#game p.list-group-item-text:eq(2)').html(question.a2);
+  	$('#game p.list-group-item-text:eq(3)').html(question.a3);
+  	$('#game p.list-group-item-text:eq(4)').html(question.a4);
+  	$('#game p.list-group-item-text:eq(5)').html(question.a5);
+  	$('.bs-example-modal-lg2 p').html(question.upper);
+  	$('.bs-example-modal-lg p').html(question.lower);
 	$('.progress-bar').css("width" , (question.progress)+'%');
 	if(questions.length < 1 ){
 		$('.modal-footer button').text("See results").removeClass("btn-default").addClass("btn-primary");	
