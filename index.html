@@ -129,7 +129,7 @@ function restartRound() {
 function nextQuestion() {
 	
   	question = questions.shift();
-  	$('#game').addClass("question-" +nextquestion );
+  	$('#game').addClass("question-" +currentquestion );
   	$('#game h2').html(question.q);
   	$('#game p.intro').text(question.intro);
   	$('#game p.list-group-item-text:eq(0)').html(question.a0);
