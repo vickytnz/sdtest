@@ -53,13 +53,11 @@ font-weight: bold;
 	border-radius:100% 0 0 0;
 background: repeating-linear-gradient( 45deg, #FF4545, #FF4545 10px, #FFBABA 10px, #FFBABA 20px );
 }
-.quarter4, .question-4 .quarter4 {
-	top:0;
-	right:0;
-	background-color:blue;
-	border-radius:0 100% 0 0 ;
-background: repeating-linear-gradient( -45deg, #5E5EFF, #5E5EFF 10px, #9C9CFC 10px, #9C9CFC 20px );
+
+.question-1 h2 span {
+background: red;
 }
+
 .quarter2, .question-2 .quarter2 {
 	bottom:0;
 	left:0;
@@ -67,6 +65,10 @@ background: repeating-linear-gradient( -45deg, #5E5EFF, #5E5EFF 10px, #9C9CFC 10
 	border-radius:0 0 0 100%;
 background: repeating-linear-gradient( -45deg, #FFA500, #FFA500 10px, #FFD589 10px, #FFD589 20px );
 }
+
+.question-2 h2 span {
+background: orange;
+} 
 .quarter3, .question-3 .quarter3 {
 	bottom:0;
 	right:0;
@@ -75,6 +77,21 @@ background: repeating-linear-gradient( -45deg, #FFA500, #FFA500 10px, #FFD589 10
 background: repeating-linear-gradient( 45deg, #8CDB8C, #8CDB8B 10px, #39B439 10px, #39B439 20px );
 }
 
+.question-3 h2 span {
+background: green;
+} 
+
+.quarter4, .question-4 .quarter4 {
+	top:0;
+	right:0;
+	background-color:blue;
+	border-radius:0 100% 0 0 ;
+background: repeating-linear-gradient( -45deg, #5E5EFF, #5E5EFF 10px, #9C9CFC 10px, #9C9CFC 20px );
+}
+
+.question-4 h2 span {
+background: blue;
+} 
 
 .cutout {
 	width: 60%;
