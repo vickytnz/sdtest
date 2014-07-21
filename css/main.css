@@ -54,7 +54,7 @@ font-weight: bold;
 background: repeating-linear-gradient( 45deg, #FF4545, #FF4545 10px, #FFBABA 10px, #FFBABA 20px );
 }
 
-.question-1 h2 span {
+.question-1 h2 span, .question-1 .quarter1:hover, .question-1-correct .quarter1 {
 background: red;
 }
 
@@ -66,7 +66,7 @@ background: red;
 background: repeating-linear-gradient( -45deg, #FFA500, #FFA500 10px, #FFD589 10px, #FFD589 20px );
 }
 
-.question-2 h2 span {
+.question-2 h2 span, .question-2 .quarter2:hover, .question-2-correct .quarter2  {
 background: orange;
 } 
 .quarter3, .question-3 .quarter3 {
@@ -77,7 +77,7 @@ background: orange;
 background: repeating-linear-gradient( 45deg, #8CDB8C, #8CDB8B 10px, #39B439 10px, #39B439 20px );
 }
 
-.question-3 h2 span {
+.question-3 h2 span, .question-3 .quarter3:hover, .question-3-correct .quarter3 {
 background: green;
 } 
 
@@ -89,7 +89,7 @@ background: green;
 background: repeating-linear-gradient( -45deg, #5E5EFF, #5E5EFF 10px, #9C9CFC 10px, #9C9CFC 20px );
 }
 
-.question-4 h2 span {
+.question-4 h2 span, .question-4 .quarter4:hover, .question-4-correct .quarter4 {
 background: blue;
 } 
 
