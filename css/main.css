@@ -51,52 +51,28 @@ font-weight: bold;
 	left:0;
 	background-color:red;
 	border-radius:100% 0 0 0;
-background: repeating-linear-gradient(
-  45deg,
-  red,
-  red 10px,
-  white 10px,
-  white 20px
-);
+background: repeating-linear-gradient( 45deg, #FF4545, #FF4545 10px, #FFBABA 10px, #FFBABA 20px );
 }
 .quarter2 {
 	top:0;
 	right:0;
 	background-color:blue;
 	border-radius:0 100% 0 0 ;
-background: repeating-linear-gradient(
-  -45deg,
-  blue,
-  blue 10px,
-  white 10px,
-  white 20px
-);
+background: repeating-linear-gradient( -45deg, #5E5EFF, #5E5EFF 10px, #9C9CFC 10px, #9C9CFC 20px );
 }
 .quarter3 {
 	bottom:0;
 	left:0;
 	background-color:orange;
 	border-radius:0 0 0 100%;
-background: repeating-linear-gradient(
-  45deg,
-  orange,
-  orange 10px,
-  white 10px,
-  white 20px
-);
+background: repeating-linear-gradient( -45deg, #FFA500, #FFA500 10px, #FFD589 10px, #FFD589 20px );
 }
 .quarter4 {
 	bottom:0;
 	right:0;
 	background-color:green;
 	border-radius:0 0 100% 0 ;
-background: repeating-linear-gradient(
-  -45deg,
-  green,
-  green 10px,
-  white 10px,
-  white 20px
-);
+background: repeating-linear-gradient( 45deg, #8CDB8C, #8CDB8B 10px, #39B439 10px, #39B439 20px );
 }
 
 
