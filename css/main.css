@@ -8,7 +8,7 @@
 background: white;
 }
 
-.badge, h2 span {
+.badge, h2 span, #printable h3 span {
 height: 40px;
 color: white;
 width: 40px;
