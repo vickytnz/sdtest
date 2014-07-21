@@ -99,6 +99,17 @@ font-weight: bold;
 	background-color:green;
 	border-radius:0 0 100% 0 ;
 }
+
+.quarter4 { 
+	background: repeating-linear-gradient(
+  45deg,
+  #606dbc,
+  #606dbc 10px,
+  #465298 10px,
+  #465298 20px
+);
+}
+
 .cutout {
 	width:50%;
 	height:50%;
