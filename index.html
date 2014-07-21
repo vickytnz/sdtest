@@ -127,16 +127,7 @@ function restartRound() {
 
 
 function nextQuestion() {
- 	printedresult +=  "<h3>" + $("#game h2").text() + "</h3><p class='lead'>" 
-	 printedresult += $( "#" + currentid + " .list-group-item-text").text() + "</p>";
- 	myheight += myTally;
- 	if (myTally == 0){
- 	if (fails !="") {
-	 		fails += " and ";
-	 	}
-	 	fails += question.fail;
-	 }
-	ga('send', 'event', 'button', 'click', currentid );
+
   	question = questions.shift();
   	$('#game h2').html(question.q);
   	$('#game p.intro').text(question.intro);
@@ -155,6 +146,16 @@ function nextQuestion() {
 }
 
 function handleAnswer(id) {
+ 	printedresult +=  "<h3>" + $("#game h2").text() + "</h3><p class='lead'>" 
+	 printedresult += $( "#" + currentid + " .list-group-item-text").text() + "</p>";
+ 	myheight += myTally;
+ 	if (myTally == 0){
+ 	if (fails !="") {
+	 		fails += " and ";
+	 	}
+	 	fails += question.fail;
+	 }
+	ga('send', 'event', 'button', 'click', currentid );
   if(questions.length > 0) {
     nextQuestion();
   } else {
