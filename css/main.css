@@ -3,7 +3,8 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
+@media all
+{
 .jumbotron {
 background: white;
 }
@@ -136,6 +137,8 @@ overflow: auto;
 
 #printable #rating, #printable .cutout {
 background: #E2E2E2;
+}
+
 }
 
 @media print
