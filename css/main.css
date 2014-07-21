@@ -140,5 +140,8 @@ background: #E2E2E2;
 
 @media print
 {
-    * {-webkit-print-color-adjust:exact;}
+     * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+   }
 }
