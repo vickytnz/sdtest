@@ -82,19 +82,12 @@ function panels(id) {
 
 var fails = "";
 
+var currentid = "";
+var myTally = "";
 function addTally(tally, elem){
-var id = $(elem).attr("id");
- printedresult +=  "<h3>" + $("#game h2").text() + "</h3><p class='lead'>" 
- printedresult += $( "#" + id + " .list-group-item-text").text() + "</p>";
- myheight += tally;
- if (tally == 0){
- 	if (fails !="") {
- 		fails += " and ";
- 	}
- 	fails += question.fail;
- }
-
-  ga('send', 'event', 'button', 'click', id );
+currentid = $(elem).attr("id");
+myTally = tally;
+/* This is kept as temp in case people change their mind, the changes happen on 'next button'*/
 }
 
 var printedresult = "";
@@ -134,6 +127,16 @@ function restartRound() {
 
 
 function nextQuestion() {
+ 	printedresult +=  "<h3>" + $("#game h2").text() + "</h3><p class='lead'>" 
+	 printedresult += $( "#" + currentid + " .list-group-item-text").text() + "</p>";
+ 	myheight += myTally;
+ 	if (myTally == 0){
+ 	if (fails !="") {
+	 		fails += " and ";
+	 	}
+	 	fails += question.fail;
+	 }
+	ga('send', 'event', 'button', 'click', currentid );
   	question = questions.shift();
   	$('#game h2').html(question.q);
   	$('#game p.intro').text(question.intro);
@@ -346,10 +349,10 @@ and <strong>we are ready for this to happen</strong>.</p>
 
 <div class="modal fade bs-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
    <div class="modal-dialog">
+   <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
       </div>
-    <div class="modal-content">
        <div class="modal-body">
         <p class="lead">Not everyone is looking to undergo radical change, and sometimes it isn’t needed. Because service design engages stakeholders in a new way, asking different questions, it might reveal that something needs to look and feel very different from how you imagined. To get the most out of working with a service designer, it is better to be in a position where you would be able to implement radical change if it was needed.</p>
       </div>
