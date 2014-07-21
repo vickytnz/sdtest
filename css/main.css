@@ -130,7 +130,8 @@ background: #ccc;
 
 #printable #rating {
 	padding: 20px;
-
+overflow: auto;
+	width: 100%
 }
 
 #printable #rating, #printable .cutout {
