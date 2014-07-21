@@ -4,15 +4,22 @@
    Author's custom styles
    ========================================================================== */
 
+.jumbotron {
+background: white;
+}
 
 .badge, h2 span {
-  height: 30px;
-  width: 30px;
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-  border-radius: 50%;
-  background: yellow;
+height: 40px;
+color: white;
+width: 40px;
+display: table-cell;
+text-align: center;
+vertical-align: middle;
+border-radius: 50%;
+background: orange;
+float: left;
+line-height: 40px;
+font-weight: bold;
 }
 
 
