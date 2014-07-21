@@ -77,14 +77,14 @@ background: repeating-linear-gradient( 45deg, #8CDB8C, #8CDB8B 10px, #39B439 10p
 
 
 .cutout {
-	width:60%;
-	height:60%;
-	background-color:white;
-	position:absolute;
-	top:30%;
-	left:30%;
-	border-radius:60%;
-	pointer-events:none;
+	width: 60%;
+height: 60%;
+background-color: #FFF;
+position: absolute;
+top: 20%;
+left: 20%;
+border-radius: 60%;
+pointer-events: none;
 	}
 
 
