@@ -94,6 +94,10 @@ background: repeating-linear-gradient( -45deg, #5E5EFF, #5E5EFF 10px, #9C9CFC 10
 background: blue;
 } 
 
+#intro .circle {
+	margin-left: 40px;
+}
+
 .cutout {
 	width: 60%;
 height: 60%;
