@@ -55,7 +55,7 @@ font-weight: bold;
 background: repeating-linear-gradient( 45deg, #FF4545, #FF4545 10px, #FFBABA 10px, #FFBABA 20px );
 }
 
-.question-1 h2 span,  span.no-1, #printable  span.no-1 .question-1 .quarter1:hover, .question-1-correct .quarter1 {
+.question-1 h2 span,  span.no-1, #printable  span.no-1, .question-1 .quarter1:hover, .question-1-correct .quarter1 {
 background: red;
 }
 
