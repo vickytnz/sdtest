@@ -156,6 +156,8 @@ function handleAnswer(id) {
 	 		fails += " and ";
 	 	}
 	 	fails += question.fail;
+	 	var temp = "question-"+ currentquestion + "-incorrect ";
+	    $('body').addClass(temp);
 	 } else  { /* correct, yay! */
 	  var temp = "question-"+ currentquestion + "-correct ";
 	 $('body').addClass(temp);
@@ -211,18 +213,18 @@ width: 100%;
  <div class="panels" id="intro">
     <div class="contents">
  <div class="circle">
-	<div class="quarter quarter1"></div>
-	<div class="quarter quarter4"></div>
-	<div class="quarter quarter2"></div>
+ <div class="quarter quarter4"></div>
 	<div class="quarter quarter3"></div>
-	<div class="cutout">?</div>
+	<div class="quarter quarter1"></div>
+	<div class="quarter quarter2"></div>
+	<div class="cutout"></div>
 </div>
               <h1>Is it the right time to use Service Design?</h1>
               <h2>Self-assessment tool for charities</h2>
         <p>We know your resources are precious, so answering these <strong><span class="q1">four</span> <span class="q2">multiple</span> <span class="q3">choice</span> <span class="q4">questions</span></strong> honestly will help you to establish if Service Design is the right investment for your organisation at the moment.
 </p> 
 
-       <p><button onclick="startTest(); ga('send', 'event', 'button', 'click', 'start' );" class="btn btn-primary btn-lg" role="button" >Great, let's get started &raquo;</button></p>
+       <p><button onclick="startTest(); ga('send', 'event', 'button', 'click', 'start' );" class="btn btn-primary btn-lg" role="button" >Let's get started &raquo;</button></p>
 <p><br>Not sure what service design is? <a rel="external" href='http://www.laurawarwick.co.uk/what-is-service-design/' target="_blank">Click here for an overview of what it is and how it can help your organisation.</a></p>    
 </div>
   </div>
@@ -237,10 +239,11 @@ width: 100%;
   </div>
 </div> -->
  <div class="circle">
-	<div class="quarter quarter1"></div>
 	<div class="quarter quarter4 circle-inactive"></div>
-	<div class="quarter quarter2 circle-inactive"></div>
 	<div class="quarter quarter3 circle-inactive"></div>
+	<div class="quarter quarter1"></div>
+	<div class="quarter quarter2 circle-inactive"></div>
+	
 	<div class="cutout"></div>
 </div>
             
@@ -311,17 +314,17 @@ and <strong>we are ready for this to happen</strong>.</p>
     <div class="contents">
     <h3>Is it the right time for your charity to use Service Design?</h3>
   <div class="circle">
-	<div class="quarter quarter1"></div>
 	<div class="quarter quarter4"></div>
-	<div class="quarter quarter2"></div>
 	<div class="quarter quarter3"></div>
+	<div class="quarter quarter1"></div>
+	<div class="quarter quarter2"></div>
 	<div class="cutout"></div>
 </div>      <h1 id="score" class="height"></h1>
       <p id="rating">Your rating will go here.</p>
       
 <p>Different people in your organisation may answer these questions differently. It can be useful to share this tool with other members of your team to see if you all  agree about your organisation's readiness to use Service Design.</p>
-      <p><button id="restart" onClick="location.reload();">Use the tool again</button></p>
-      <p><button id="restart" onClick="printresults();"> See results (opens in new window)</button></p>  
+<p><button id="restart" onClick="printresults();"> See results (opens in new window)</button></p> 
+      <p><button id="restart" onClick="location.reload();">Use the tool again</button></p> 
     <p class="text-muted small">You may need to turn on 'print background images' to print your results properly.</p>
     	
     </div>
